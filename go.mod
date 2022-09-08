@@ -1,3 +1,3 @@
 module github.com/nickwells/xdg.mod
 
-go 1.12
+go 1.18
