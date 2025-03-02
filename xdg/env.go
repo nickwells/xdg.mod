@@ -12,5 +12,6 @@ func ConfigHome() string {
 	if err != nil {
 		return ""
 	}
+
 	return dir
 }
