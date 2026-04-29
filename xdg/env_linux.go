@@ -18,9 +18,6 @@ const (
 	ConfigDirsEnvVar     = "XDG_CONFIG_DIRS"
 	ConfigDirsEnvVarDflt = "/etc/xdg"
 
-	CacheHomeEnvVar     = "XDG_CACHE_HOME"
-	CacheHomeEnvVarDflt = "$HOME/.cache"
-
 	ListSep = ":"
 )
 
@@ -55,15 +52,4 @@ func ConfigDirs() []string {
 	}
 
 	return strings.Split(val, ListSep)
-}
-
-// CacheHome returns the value of the XDG_CACHE_HOME environment variable or
-// the default value
-func CacheHome() string {
-	rval := os.ExpandEnv("$" + CacheHomeEnvVar)
-	if rval == "" {
-		rval = os.ExpandEnv(CacheHomeEnvVarDflt)
-	}
-
-	return rval
 }

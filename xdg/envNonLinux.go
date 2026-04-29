@@ -16,8 +16,3 @@ func DataDirs() []string {
 func ConfigDirs() []string {
 	return []string{}
 }
-
-// CacheHome returns an empty string for non-Linux systems
-func CacheHome() string {
-	return ""
-}
